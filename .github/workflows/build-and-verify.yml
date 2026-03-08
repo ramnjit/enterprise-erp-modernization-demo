@@ -18,11 +18,17 @@ jobs:
       with:
         dotnet-version: '9.0.x'
 
-    - name: Restore dependencies
-      run: dotnet restore
+    # Restore dependencies for both projects
+    - name: Restore Legacy Monolith
+      run: dotnet restore legacy_onsight_erp_monolith/*.csproj
 
+    - name: Restore Modern Cloud API
+      run: dotnet restore modern_cloud_api/*.csproj
+
+    # Build Legacy Monolith
     - name: Build Legacy Monolith
       run: dotnet build legacy_onsight_erp_monolith/*.csproj --no-restore --configuration Release
 
-    - name: Build Modern Cloud API (Azure Functions)
+    # Build Modern Cloud API
+    - name: Build Modern Cloud API
       run: dotnet build modern_cloud_api/*.csproj --no-restore --configuration Release
