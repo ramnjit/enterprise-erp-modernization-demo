@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "modern_cloud_api": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7081",
+      "launchBrowser": false
+    }
+  }
+}

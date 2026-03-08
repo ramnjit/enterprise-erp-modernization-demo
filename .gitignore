@@ -1,0 +1,21 @@
+# IDEs
+.vs/
+.vscode/
+*.user
+
+# Build results
+[Bb]in/
+[Oo]bj/
+
+# Azure Functions Local Secrets (CRITICAL)
+local.settings.json
+
+# Local App Settings
+appsettings.Development.json
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# NOTE: We are INTENTIONALLY NOT ignoring the SQLite .db file 
+# because Render requires it in the repository to serve the legacy API.
