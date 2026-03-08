@@ -1,0 +1,28 @@
+name: Build and Verify ERP Modernization
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup .NET 9
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '9.0.x'
+
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Build Legacy Monolith
+      run: dotnet build legacy_onsight_erp_monolith/*.csproj --no-restore --configuration Release
+
+    - name: Build Modern Cloud API (Azure Functions)
+      run: dotnet build modern_cloud_api/*.csproj --no-restore --configuration Release
