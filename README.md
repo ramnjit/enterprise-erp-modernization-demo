@@ -1,4 +1,4 @@
-# 🏭 Enterprise ERP Modernization (Strangler Fig & CQRS)
+# Enterprise ERP Modernization (Strangler Fig & CQRS)
 
 ![Build Status](https://github.com/Ramnjit/enterprise-erp-modernization-demo/actions/workflows/build-and-verify.yml/badge.svg)
 
@@ -12,10 +12,10 @@ By incrementally migrating read-heavy inventory operations from a highly relatio
 
 ---
 
-## 🚀 The Business Problem
+## The Business Problem
 Legacy on-premise systems often rely on massive relational databases (SQL). As data grows, complex `JOIN` operations bottleneck the entire system, slowing down critical user-facing applications (like product catalogs or inventory lookups).
 
-## 💡 The Architectural Solution
+## The Architectural Solution
 Instead of a risky "Big Bang" rewrite, this project implements the **Strangler Fig Pattern** to safely and incrementally route traffic away from the legacy system. 
 
 
@@ -28,7 +28,7 @@ By applying **CQRS**, we separate the heavy write operations (which remain in th
 
 ---
 
-## 🛠️ Tech Stack & Patterns
+## Tech Stack & Patterns
 * **Language/Framework:** C#, .NET 9
 * **Cloud & Hosting:** Azure Functions (Serverless), Render (Monolith API)
 * **Architecture Patterns:** Strangler Fig, CQRS, Event-Driven/ETL Concepts
@@ -37,7 +37,7 @@ By applying **CQRS**, we separate the heavy write operations (which remain in th
 
 ---
 
-## 🏎️ The Interactive Demo
+## The Interactive Demo
 I built a custom frontend dashboard to visually prove the performance difference between the two architectures. You can run a live "race" between the two APIs directly in your browser.
 
 **Features of the demo:**
@@ -45,11 +45,11 @@ I built a custom frontend dashboard to visually prove the performance difference
 * **Cold-Start Mitigation:** Implements a silent background warm-up ping to wake up the Azure serverless container upon page load.
 * **Keep-Alive Heartbeat:** Utilizes a CRON job (UptimeRobot) to ensure the legacy free-tier Linux container remains awake for accurate benchmarking.
 
-👉 **[Try the Demo Here](https://romanboparai.com/erp-modernization)**
+**[Try the Demo Here](https://romanboparai.com/erp-modernization)**
 
 ---
 
-## 💻 How to Run Locally
+## How to Run Locally
 
 If you would like to clone this repository and test the APIs locally:
 
@@ -65,8 +65,8 @@ If you would like to clone this repository and test the APIs locally:
    dotnet run
    ```
     *Note: The root localhost URL will return empty. To test the API, navigate directly to the endpoint in your browser or Postman (Check your console output in case your local machine assigns a different port):*
-    * 👉 **Catalog Fetch:** `http://localhost:5249/api/legacy/all` 
-    * 👉 **Single SKU Lookup:** `http://localhost:5249/api/legacy/product/0005860631142`
+    * **Catalog Fetch:** `http://localhost:5249/api/legacy/all` 
+    * **Single SKU Lookup:** `http://localhost:5249/api/legacy/product/0005860631142`
 
 3. **Run the Modern Azure Function API:**
    ```bash
