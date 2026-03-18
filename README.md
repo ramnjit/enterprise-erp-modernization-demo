@@ -76,7 +76,7 @@ If you would like to clone this repository and test the APIs locally:
    *The Azure Functions Core Tools will output the exact local URLs for your endpoints in the console (typically starting at `http://localhost:7071`).*
    
    *Test the endpoints:*
-   * 👉 **Catalog Fetch:** `http://localhost:7071/api/modern/all`
-   * 👉 **Single SKU Lookup:** `http://localhost:7071/api/modern/product/0005860631142`
+   * **Catalog Fetch:** `http://localhost:7071/api/modern/all`
+   * **Single SKU Lookup:** `http://localhost:7071/api/modern/product/0005860631142`
 
 *(Prerequisites: Ensure you have the .NET 9 SDK and Azure Functions Core Tools installed on your machine).*
