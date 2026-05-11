@@ -44,8 +44,6 @@ I built a custom frontend dashboard to visually prove the performance difference
 * **Cold-Start Mitigation:** Implements a silent background warm-up ping to wake up the Azure serverless container upon page load.
 * **Keep-Alive Heartbeat:** Utilizes a CRON job (UptimeRobot) to ensure the legacy free-tier Linux container remains awake for accurate benchmarking.
 
-**[Try the Demo Here](https://romanboparai.com/erp-modernization)**
-
 ---
 
 ## How to Run Locally
