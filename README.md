@@ -2,7 +2,6 @@
 
 ![Build Status](https://github.com/Ramnjit/enterprise-erp-modernization-demo/actions/workflows/build-and-verify.yml/badge.svg)
 
-**Live Interactive Demo:** [romanboparai.com/erp-modernization](https://romanboparai.com/erp-modernization)
 
 This repository demonstrates the modernization of a legacy on-premise Enterprise Resource Planning (ERP) system using the **Strangler Fig Pattern** and **CQRS** (Command Query Responsibility Segregation). 
 
